@@ -1,0 +1,110 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  user-select: none;
+}
+
+.modal h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.modal p {
+  margin: 1rem 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.delete-completed-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.delete-completed-btn:hover {
+  color: var(--color-primary-hover);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.confirm-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.confirm-btn {
+  background: var(--color-error);
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background: #d33b3b;
+}
+
+.cancel-btn {
+  background: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.cancel-btn:hover {
+  background: var(--color-primary-hover);
+  color: var(--color-surface);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal p {
+    font-size: 0.9rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .confirm-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
