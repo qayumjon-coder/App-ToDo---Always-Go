@@ -60,7 +60,7 @@ Manage your daily tasks with an intuitive drag & drop interface, local storage, 
 Clone this repository and run the following commands:
 
 ```bash
-git clone https://github.com/your-username/todo-always-go.git
+git clone https://github.com/qayumjon-coder/todo-always-go.git
 cd todo-always-go
 npm install
 npm run dev
